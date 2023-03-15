@@ -47,7 +47,7 @@ class Follower:
             # Hope for the best. Lots of failure modes.
             err = cx - w/2
             self.twist.linear.x = 0.2
-            self.twist.angular.z = -float(err) / 1000
+            self.twist.angular.z = -float(err) / 500
             self.cmd_vel_pub.publish(self.twist)
         cv2.imshow("image", image)
         cv2.waitKey(3)
